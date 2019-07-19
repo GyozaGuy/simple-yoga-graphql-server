@@ -2,14 +2,19 @@
   "name": "gyozaguy-graphql",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.mjs",
+  "engines": {
+    "node": "12.6.0",
+    "npm": "6.10.1"
+  },
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon --experimental-modules index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "GyozaGuy",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^6.0.1",
     "graphql-yoga": "^1.18.1",
     "nodemon": "^1.19.1"
   }
