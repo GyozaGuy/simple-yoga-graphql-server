@@ -2,13 +2,13 @@
   "name": "gyozaguy-graphql",
   "version": "1.0.0",
   "description": "",
-  "main": "server/index.mjs",
+  "main": "server/server.mjs",
   "engines": {
     "node": "12.6.0",
     "npm": "6.10.1"
   },
   "scripts": {
-    "start": "nodemon --experimental-modules server/index.mjs",
+    "start": "nodemon --experimental-modules server/server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "GyozaGuy",
