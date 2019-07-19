@@ -1,0 +1,23 @@
+body {
+  background-color: #121255;
+  color: White;
+  font-family: Arial;
+}
+
+button {
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+button:active {
+  background-color: DarkGray;
+}
+
+input[type='text'] {
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+  padding: 10px;
+}

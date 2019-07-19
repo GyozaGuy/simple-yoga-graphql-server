@@ -1,0 +1,17 @@
+<%
+const {
+  components = [],
+  title = 'Replace Me'
+} = config
+%>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="/css/global.css" rel="stylesheet">
+    <% components.forEach(c => { %>
+      <script src="/components/<%= c %>/<%= c %>.mjs" type="module"></script>
+    <% }) %>
+  </head>
+  <body>
