@@ -9,7 +9,7 @@ customElements.define(
         dom(
           html`
             <input @name="name" type="text" />
-            <button #click="${this.hello.bind(this)}">
+            <button #click="${this.sayHello.bind(this)}">
               Make API Request
             </button>
             <pre @name="result"></pre>
@@ -19,7 +19,7 @@ customElements.define(
       )
     }
 
-    async hello() {
+    async sayHello() {
       this.result.textContent = JSON.stringify(
         await hello(this.name.value),
         null,
