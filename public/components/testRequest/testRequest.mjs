@@ -1,5 +1,5 @@
 import { dom, html } from '/include/mjs/templateUtils.mjs'
-import { fetchGql } from '/helpers/fetchHelper.mjs'
+import { hello } from '/queries.mjs'
 
 customElements.define(
   'test-request',
@@ -9,19 +9,19 @@ customElements.define(
         dom(
           html`
             <input @name="name" type="text" />
-            <button #click="${this.apiRequest.bind(this)}">
+            <button #click="${this.hello.bind(this)}">
               Make API Request
             </button>
-            <pre @name="payload"></pre>
+            <pre @name="result"></pre>
           `,
           this
         )
       )
     }
 
-    async apiRequest() {
-      this.payload.textContent = JSON.stringify(
-        await fetchGql(`{hello(name: "${this.name.value || ''}")}`),
+    async hello() {
+      this.result.textContent = JSON.stringify(
+        await hello(this.name.value),
         null,
         2
       )
