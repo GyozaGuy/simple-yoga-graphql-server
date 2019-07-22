@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #121255;
   color: White;
@@ -5,9 +9,10 @@ body {
 }
 
 button {
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 4px;
   cursor: pointer;
+  outline: 0;
   padding: 10px;
 }
 
@@ -15,9 +20,17 @@ button:active {
   background-color: DarkGray;
 }
 
+button:focus {
+  border: 1px solid SkyBlue;
+}
+
 input[type='text'] {
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 4px;
   outline: 0;
   padding: 10px;
+}
+
+input[type='text']:focus {
+  border: 1px solid SkyBlue;
 }
