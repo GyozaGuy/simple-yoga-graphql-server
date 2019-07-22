@@ -9,12 +9,14 @@ export async function fetchGql(query) {
 }
 
 export async function fetchJson(url, options) {
-  const response = await fetch(url, options)
+  const fetchFunc = options.fetch || fetch
+  const response = await fetchFunc(url, options)
   return await response.json()
 }
 
 export async function fetchText(url, options) {
-  const response = await fetch(url, options)
+  const fetchFunc = options.fetch || fetch
+  const response = await fetchFunc(url, options)
   return await response.text()
 }
 
