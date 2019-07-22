@@ -2,7 +2,7 @@ import { dom, html } from '/include/mjs/templateUtils.mjs'
 import { fetchGql } from '/helpers/fetchHelper.mjs'
 
 customElements.define(
-  'test-comp',
+  'test-request',
   class extends HTMLElement {
     connectedCallback() {
       this.appendChild(
