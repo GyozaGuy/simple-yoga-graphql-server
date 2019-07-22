@@ -16,12 +16,14 @@ customElements.define(
             <button #click="${this.sayHello.bind(this)}">
               Say hello
             </button>
+
             <pre @name="helloResult"></pre>
             <input @name="charName" placeholder="Search" type="text" />
             <button #click="${this.getCharacters.bind(this)}">
               Get characters
             </button>
             <pre @name="charResult"></pre>
+
             <input @name="pokeName" placeholder="Name" type="text" />
             <label>
               <input type="checkbox" value="attack" checked /> Attack
