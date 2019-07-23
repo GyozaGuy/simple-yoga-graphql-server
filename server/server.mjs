@@ -3,7 +3,6 @@ import express from 'express'
 import typeDefs from './typeDefs.mjs'
 import resolvers from './resolvers.mjs'
 import pagesRouter from './routes/pages.mjs'
-import apiRouter from './routes/api.mjs'
 
 const { static: expressStatic } = express
 const { GraphQLServer } = yoga
@@ -19,7 +18,6 @@ server.express.use((_req, res, next) => {
 })
 
 server.express.use('/', pagesRouter)
-server.express.use('/api', apiRouter)
 
 server.express.set('view engine', 'ejs')
 server.express.use(expressStatic('public'))
