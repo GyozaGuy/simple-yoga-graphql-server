@@ -1,0 +1,35 @@
+<%
+config = {
+  components: ['customButton', 'customCard', 'customElement', 'customInput', 'testComp'],
+  title: 'Test Page'
+}
+%>
+
+<%- include('partials/header') %>
+
+<!-- <custom-element>
+  <div>I'm a child</div>
+  <custom-button label="Click me"></custom-button>
+</custom-element>
+
+<custom-card>
+  <h1>Header</h1>
+  <div>Content</div>
+
+  <custom-card>
+    <h2>Sub Header</h2>
+    <div>Sub Content</div>
+  </custom-card>
+</custom-card>
+
+<custom-card>
+  <custom-input value="this is the current input value"></custom-input>
+</custom-card> -->
+
+<!-- <template-test></template-test> -->
+
+<test-comp test-prop="THE HEADER"></test-comp>
+
+<test-comp test-prop="THE HEADER 2"></test-comp>
+
+<%- include('partials/footer') %>

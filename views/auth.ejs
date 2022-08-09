@@ -1,0 +1,20 @@
+<%
+config = {
+  title: 'Node Auth Test'
+}
+%>
+
+<%- include('partials/header') %>
+
+<div>
+  <a href="<%= userInfo ? '/logout' : url %>"><%= userInfo ? 'Logout' : 'Login' %></a>
+</div>
+
+<% if (userInfo) { %>
+  <div>
+    Email: <%= userInfo.email %><br>
+    ID: <%= userInfo.id %>
+  </div>
+<% } %>
+
+<%- include('partials/footer') %>
